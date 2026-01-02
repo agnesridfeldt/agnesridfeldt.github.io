@@ -4,7 +4,7 @@ import "./SocialMediaSite.css";
 import albumPic from "../../../assets/images/shepherd-moons.jpeg";
 import katePfp from "../../../assets/images/aero-pfp.png";
 import natPfp from "../../../assets/images/nat-pfp.png";
-import aaronPfp from "../../../assets/images/nat-pfp.png"; // Change this at some point
+import aaronPfp from "../../../assets/images/aaron-pfp.png";
 
 const initialFriendPosts = [
   {

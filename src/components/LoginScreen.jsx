@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./LoginScreen.css";
 
-import profilePic from "../assets/desktop/login-pic.png";
+import profilePic from "../assets/images/aero-pfp.png";
 import arrowButton from "../assets/desktop/right-arrow-button.png";
 
 export default function LoginScreen({ onLogin, onWrongPassword }) {
