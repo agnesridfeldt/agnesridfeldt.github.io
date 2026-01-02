@@ -1,0 +1,388 @@
+.sm-wrap {
+  width: min(1550px, 100%);
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #222;
+  overflow: hidden;
+}
+
+.sm-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  gap: 18px;
+  height: 880px;
+  align-items: stretch;
+}
+
+.sm-left,
+.sm-mid,
+.sm-right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 0;
+}
+
+.sm-left,
+.sm-right {
+  background: transparent;
+}
+
+.sm-mid {
+  min-height: 0;
+  background: #f7d9e3;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.sm-midInner {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.sm-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.sm-header {
+  position: relative;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  background: linear-gradient(#ff7fb2, #d64a85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sm-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 45%;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.55),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+}
+
+.sm-header__title,
+.sm-header__right {
+  position: relative;
+  z-index: 1;
+}
+
+.sm-muted {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.sm-profileCard {
+  padding: 14px 14px 12px;
+  height: auto;
+}
+
+.sm-nameRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 4px 2px 10px;
+}
+
+.sm-name {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #ff63a3;
+  font-style: italic;
+  align-self: center;
+}
+
+.sm-photoImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.sm-subline {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #222;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.sm-nowPlaying {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.sm-album {
+  width: 100%;
+  display: inline-block;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.sm-albumImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sm-trackTitle {
+  font-weight: 800;
+  margin-bottom: 3px;
+}
+
+.sm-trackArtist {
+  color: #666;
+  font-size: 12px;
+}
+
+.sm-topFriends {
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sm-friendTile {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.sm-friendTile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75) inset,
+    0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.sm-friendTile:focus-visible {
+  outline: 2px solid rgba(255, 120, 180, 0.9);
+  outline-offset: 2px;
+}
+
+.sm-friendImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.sm-stats {
+  padding: 12px;
+  border: 1px solid rgba(255, 99, 163, 0.5);
+  background: #ffeaf3;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.sm-composerBody {
+  padding: 12px;
+}
+
+.sm-textarea {
+  width: 100%;
+  resize: none;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  font-size: 13px;
+  outline: none;
+  background: #fff;
+}
+
+.sm-composerFooter {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sm-btn {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(#ff85b6, #d64a85);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55) inset,
+    0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sm-btn.is-disabled,
+.sm-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.sm-feedCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+
+.sm-feed {
+  padding: 10px;
+  overflow-y: auto;
+  background: #fff;
+  flex: 1;
+  min-height: 0;
+  max-height: none;
+}
+
+.sm-post {
+  display: block;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  color: #000;
+  text-align: left;
+}
+
+.sm-postTop {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.sm-postName {
+  font-weight: 900;
+}
+
+.sm-postHandle,
+.sm-postTime {
+  color: #777;
+  font-size: 12px;
+}
+
+.sm-dot {
+  color: #bbb;
+}
+
+.sm-postText {
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.sm-postActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #777;
+}
+
+.sm-actionText:hover {
+  text-decoration: underline;
+}
+
+.sm-mediaGrid {
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sm-mediaTile {
+  aspect-ratio: 1 / 1;
+  background: #d9d9d9;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55) inset;
+}
+
+.sm-wallCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+
+.sm-wallBody {
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.sm-wallList {
+  display: grid;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 100%;
+  padding-right: 4px;
+}
+
+.sm-wallPost {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+  text-align: left;
+  width: 152px;
+}
+
+.sm-wallMeta {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.sm-wallName {
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.sm-wallHandle {
+  color: #777;
+  font-size: 9px;
+}
+
+.sm-wallText {
+  font-size: 11px;
+  line-height: 1.45;
+  text-align: left;
+}

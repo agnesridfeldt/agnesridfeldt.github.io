@@ -1,0 +1,229 @@
+.help-screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  color: #4a1734;
+}
+
+.help-screen::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  background-image: url("../assets/desktop/desktop-background.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  transform: scale(1.04);
+  z-index: -1;
+}
+
+.help-overlay {
+  width: min(1000px, 92vw);
+  max-height: 86vh;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  padding: 18px 22px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.help-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  padding-bottom: 8px;
+}
+
+.help-back {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.help-back:hover .help-back-icon {
+  filter: brightness(1.05);
+}
+
+.help-back:focus-visible {
+  outline: 2px solid rgba(210, 55, 106, 0.6);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+
+.help-back-icon {
+  width: 50px;
+  height: auto;
+  display: block;
+  transform: rotate(180deg);
+  transition: transform 160ms ease, filter 160ms ease;
+  transform-origin: center;
+}
+
+.help-back:hover .help-back-icon {
+  transform: rotate(180deg) scale(1.06);
+}
+
+
+.help-header-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.help-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #4a1734;
+  text-align: center;
+  font-family: "Berrie", "Segoe UI", system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
+}
+
+.help-body {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 14px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.help-column {
+  min-width: 0;
+  max-height: calc(86vh - 78px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.help-card {
+  background: linear-gradient(to bottom, #ffffff, #f7f2fa);
+  border-radius: 10px;
+  padding: 12px 14px 10px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9),
+    0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.help-card--hints {
+  background: linear-gradient(to bottom, #fff7fc, #fbe1f2);
+}
+
+.help-section-title {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #7b1f4a;
+  text-align: left;
+}
+
+.help-paragraph {
+  margin: 0 0 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #44152c;
+  text-align: left;
+}
+
+.help-paragraph--small {
+  font-size: 11px;
+  color: #7a3b60;
+}
+
+.help-list {
+  margin: 4px 0 4px 16px;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #44152c;
+  text-align: left;
+}
+
+.help-list li + li {
+  margin-top: 2px;
+}
+
+.help-hint-group {
+  margin-top: 6px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9),
+    0 3px 8px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.help-hint-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+.help-hint-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #5a2040;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: left;
+}
+
+.help-hint-summary::before {
+  content: "›";
+  font-size: 10px;
+  transform: translateY(1px);
+  color: #b53c78;
+}
+
+.help-hint-group[open] .help-hint-summary {
+  background: linear-gradient(to right, #ffe5f7, #ffffff);
+  border-bottom: 1px solid rgba(240, 150, 200, 0.3);
+}
+
+.help-hint-list {
+  margin: 6px 10px 8px 26px;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #462538;
+  text-align: left;
+}
+
+.help-column::-webkit-scrollbar {
+  width: 6px;
+}
+
+.help-column::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.help-column::-webkit-scrollbar-thumb {
+  background: rgba(160, 120, 150, 0.4);
+  border-radius: 999px;
+}

@@ -1,0 +1,173 @@
+.desktop-screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background-image: url("../assets/desktop/desktop-background.png");
+  background-size: cover;
+  background-position: center;
+
+  font-family: "Segoe UI", sans-serif;
+}
+
+.desktop-content {
+  position: absolute;
+  inset: 0;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+/* Widgets */
+.desktop-widget-area {
+  position: absolute;
+  top: calc((100% - 40px) / 2);
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  transform-origin: center center;
+
+  display: flex;
+  gap: 28px; 
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.widget-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.widget-column > * {
+  width: 360px;
+  max-width: 360px;
+  flex-shrink: 0;
+}
+
+.desktop-widgets {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Taskbar */
+.taskbar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 12px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.42) 40%,
+    rgba(255, 255, 255, 0.30) 100%
+  );
+
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+
+  box-shadow:
+    0 -1px 2px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  color: #102030;
+}
+
+.taskbar-left,
+.taskbar-right,
+.taskbar-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoff-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 600;
+  color: #304a66;
+
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 1),
+    rgba(225, 240, 255, 0.95) 55%,
+    rgba(190, 210, 240, 0.9) 100%
+  );
+
+  box-shadow:
+    0 0 6px rgba(0, 0, 0, 0.35),
+    inset 0 0 4px rgba(255, 255, 255, 0.9);
+
+  cursor: pointer;
+  outline: none;
+}
+
+.logoff-button:hover {
+  filter: brightness(1.05);
+}
+
+.logoff-button:active {
+  transform: translateY(1px);
+  box-shadow:
+    0 0 3px rgba(0, 0, 0, 0.4),
+    inset 0 0 4px rgba(180, 200, 230, 0.9);
+}
+
+.taskbar-clock {
+  font-size: 0.82rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.85),
+    rgba(220, 230, 245, 0.95)
+  );
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.9),
+    0 0 4px rgba(0, 0, 0, 0.25);
+  color: #223549;
+}
+
+.taskbar-app-button {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 4px 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(220, 230, 245, 0.95)
+  );
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.8),
+    0 1px 3px rgba(0, 0, 0, 0.35);
+  color: #223549;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.taskbar-app-button:hover {
+  filter: brightness(1.05);
+}

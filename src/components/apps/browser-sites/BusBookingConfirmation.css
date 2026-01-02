@@ -1,0 +1,148 @@
+.bc-wrap {
+  background: #d9d9d9;
+  padding: 16px 0 28px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000;
+}
+
+.bc-card {
+  width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #8b8b8b;
+}
+
+.bc-header {
+  background: #123050;
+  color: #fff;
+  padding: 10px 12px;
+  border-bottom: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bc-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bc-logo {
+  width: 34px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #4f84c4;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  font-size: 11px;
+}
+
+.bc-title {
+  font-weight: bold;
+}
+
+.bc-sub {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+.bc-status {
+  text-align: right;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.bc-statusLine {
+  margin: 1px 0;
+}
+
+.bc-label {
+  opacity: 0.9;
+}
+
+.bc-code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+}
+
+.bc-main {
+  padding: 12px;
+}
+
+.bc-h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  margin: 2px 0 6px;
+}
+
+.bc-note {
+  margin: 0 0 12px;
+  color: #222;
+}
+
+.bc-section {
+  border: 1px solid #c7c7c7;
+  margin: 10px 0;
+}
+
+.bc-sectionTitle {
+  background: #ededed;
+  border-bottom: 1px solid #c7c7c7;
+  padding: 6px 8px;
+  font-weight: bold;
+}
+
+.bc-grid {
+  padding: 8px;
+}
+
+.bc-row {
+  display: flex;
+  gap: 10px;
+  padding: 4px 0;
+  border-bottom: 1px dotted #cfcfcf;
+}
+
+.bc-row:last-child {
+  border-bottom: 0;
+}
+
+.bc-key {
+  width: 140px;
+  color: #333;
+}
+
+.bc-val {
+  flex: 1;
+}
+
+.bc-dim {
+  color: #555;
+}
+
+.bc-footnote {
+  margin-top: 12px;
+  font-size: 11px;
+  color: #333;
+  padding-top: 10px;
+  border-top: 1px dotted #999;
+}
+
+.bc-footer {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #555;
+  text-align: center;
+  padding: 10px 0 6px;
+}
+
+.bc-footer a {
+  color: #0000ee;
+  text-decoration: underline;
+}

@@ -1,0 +1,110 @@
+.message-widget {
+  position: relative;
+  width: 520px;
+  height: 130px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.60);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.30),
+    0 18px 40px rgba(0, 0, 0, 0.85);
+
+  color: #ffffff;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.message-widget--interactive {
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.message-widget--interactive:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.45),
+    0 22px 48px rgba(0, 0, 0, 0.95);
+}
+
+.message-widget--interactive:active {
+  transform: scale(0.99) translateY(1px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 12px 28px rgba(0, 0, 0, 0.8);
+}
+
+.mw-left {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.mw-avatar {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.5),
+    0 8px 18px rgba(0, 0, 0, 0.25),
+    inset 0 3px 6px rgba(255, 255, 255, 0.8);
+}
+
+.mw-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mw-avatar-fallback {
+  width: 100%;
+  height: 100%;
+}
+
+.mw-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
+}
+
+.mw-name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 3px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.mw-preview {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-style: italic;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
